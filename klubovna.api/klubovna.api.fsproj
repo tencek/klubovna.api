@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Controllers\OmegaController.fs" />
     <Compile Include="Controllers\PresenceController.fs" />
     <Compile Include="Startup.fs" />
     <Compile Include="Program.fs" />
