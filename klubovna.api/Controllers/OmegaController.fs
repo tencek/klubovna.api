@@ -7,10 +7,10 @@ open System.Net
 type OmegaController () =
     inherit Controller()
 
-    [<HttpPost("heartbeat")>]
+    [<HttpPut("heartbeat")>]
     [<ProducesResponseType(typeof<unit>, 200)>]
     [<ProducesResponseType(401)>]
-    member this.Post([<FromBody>] token:string) : IActionResult =
+    member this.Heartbeat([<FromBody>] token:string) : IActionResult =
         match token with
         | "12345" -> new OkResult() :> IActionResult
         | _ -> new UnauthorizedResult() :> IActionResult
