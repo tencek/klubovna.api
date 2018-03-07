@@ -2,7 +2,7 @@
 
 open Microsoft.AspNetCore.Mvc
 
-[<Route("api/[controller]")>]
+[<Route("api/presence")>]
 type PresenceController () =
     inherit Controller()
 

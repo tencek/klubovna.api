@@ -3,7 +3,7 @@
 open Microsoft.AspNetCore.Mvc
 open System.Net
 
-[<Route("api/[controller]")>]
+[<Route("api/omega")>]
 type OmegaController () =
     inherit Controller()
 
