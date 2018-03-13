@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Notifications.fs" />
+    <Compile Include="HeartBeatProcessor.fs" />
     <Compile Include="Controllers\OmegaController.fs" />
     <Compile Include="Controllers\PresenceController.fs" />
     <Compile Include="Startup.fs" />
