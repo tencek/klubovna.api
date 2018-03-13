@@ -21,3 +21,10 @@ type PresenceController () =
     [<ProducesResponseType(typeof<HeartBeatIntervals>, 200)>]
     member this.GetHistory() =
         heartBeatAgent.PostAndReply (fun replyChannel -> (GetIntervals, replyChannel))
+
+    [<HttpGet("latest")>]
+    [<ProducesResponseType(typeof<DateTime>, 200)>]
+    member this.GetLatest() =
+        match heartBeatAgent.PostAndReply (fun replyChannel -> (GetIntervals, replyChannel)) with
+        | [] -> OkObjectResult(())
+        | head::_tail -> OkObjectResult(head.tsEnd)
