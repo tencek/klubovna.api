@@ -1,3 +1,4 @@
 #
 */1 * * * * /root/klubovnaapi-heartbeat.sh
 # Make sure you have this comment at the end of your crontab
+
